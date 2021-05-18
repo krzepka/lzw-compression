@@ -5,7 +5,9 @@
 class Coder{
     protected:
     std::ifstream fread;
+    const std::string path;
 
     public:
     Coder(std::string);
+    ~Coder();
 };
