@@ -3,7 +3,9 @@
 #pragma once
 
 class Encoder: Coder{
-    public:
+private:
+    const std::string outname;
+public:
     void work();
-    Encoder(std::string);
+    Encoder(std::string, std::string);
 };

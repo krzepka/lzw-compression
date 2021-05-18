@@ -3,11 +3,11 @@
 #pragma once
 
 class Coder{
-    protected:
+protected:
     std::ifstream fread;
     const std::string path;
 
-    public:
+public:
     Coder(std::string);
     ~Coder();
 };

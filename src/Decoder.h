@@ -3,7 +3,7 @@
 #pragma once
 
 class Decoder: Coder{
-    public:
+public:
     void work();
     Decoder(std::string);
 };
