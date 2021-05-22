@@ -46,7 +46,7 @@ bool Encoder::existsInDictionary(const std::string& key) {
 }
 
 void Encoder::addToDictionary(const std::string& key) {
-    dictionary.insert(DictionaryElementType(key, dictionary.size()));
+    dictionary.insert(DictionaryElementType(key, static_cast<CodeType>(dictionary.size())));
 }
 
 CodeType Encoder::getDictionaryValue(const std::string &key) {
