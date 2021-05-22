@@ -8,6 +8,6 @@ protected:
     const std::string path;
 
 public:
-    Coder(std::string);
+    explicit Coder(const std::string&);
     ~Coder();
 };
