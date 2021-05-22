@@ -61,6 +61,6 @@ CodeType Encoder::getDictionaryValue(const std::string &key) {
 
 void Encoder::handleFullDictionary() {
     if(dictionary.size() == std::numeric_limits<CodeType>::max()){
-        //TODO
+        refillDictionary();
     }
 }
