@@ -13,4 +13,10 @@ public:
     explicit Decoder(const std::string&);
 
     void throw_cannot_decode(CodeType character);
+
+    void appendToDictionary(const std::string& value);
+
+    void handleFullDictionary();
+
+    void refillDictionary();
 };
