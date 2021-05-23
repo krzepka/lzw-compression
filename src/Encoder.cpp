@@ -1,6 +1,7 @@
 #include "Encoder.h"
 #include<fstream>
 #include <utility>
+#include <limits>
 
 Encoder::Encoder(const std::string& s, std::string out):Coder(s), outname(std::move(out)){};
 

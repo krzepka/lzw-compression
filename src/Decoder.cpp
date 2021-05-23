@@ -1,4 +1,5 @@
 #include "Decoder.h"
+#include <limits>
 
 Decoder::Decoder(const std::string &s) : Coder(s) {};
 
