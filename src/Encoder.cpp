@@ -31,8 +31,7 @@ void Encoder::work(){
         handleFullDictionary();
 
     }
-    out << currentChar;
-
+    out.write(reinterpret_cast<char*>(getDictionaryValue({currentChar})), sizeof(CodeType));
     out.close();
 }
 
