@@ -24,9 +24,11 @@ int main(int argc, char* argv[])
         return -1;
     }
     try
-    {  
-        Encoder enc(input, outname);
-        enc.work();
+    {
+        {
+            Encoder enc(input, outname);
+            enc.work();
+        }
         Decoder dec("output/"+outname+".enc");
         dec.work();
         std::cout<<"pliki wyjsciowe znajduja sie w katalogu output"<<std::endl;
