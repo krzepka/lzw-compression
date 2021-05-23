@@ -12,7 +12,7 @@ void Decoder::work() {
 
     refillDictionary();
 
-    while (fread.get(reinterpret_cast<char*>(&currentCode), 2)) {
+    while (fread.read(reinterpret_cast<char*>(&currentCode), 2)) {
         throw_cannot_decode(currentCode);
         handleFullDictionary();
 
