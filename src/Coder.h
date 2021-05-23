@@ -4,8 +4,8 @@
 
 class Coder{
 protected:
-    std::ifstream fread;
     const std::string path;
+    std::ifstream fread;
 
 public:
     explicit Coder(const std::string&);
