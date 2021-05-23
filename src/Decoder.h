@@ -5,5 +5,5 @@
 class Decoder: Coder{
 public:
     void work();
-    Decoder(std::string);
+    Decoder(const std::string&);
 };
