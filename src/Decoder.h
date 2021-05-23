@@ -12,5 +12,5 @@ public:
     void work();
     explicit Decoder(const std::string&);
 
-    void throw_cannot_decode(char character);
+    void throw_cannot_decode(CodeType character);
 };

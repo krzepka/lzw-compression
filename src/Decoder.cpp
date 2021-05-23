@@ -9,21 +9,22 @@ void Decoder::work() {
     int previousIndex;
     char firstChar;
 
-    char currentChar;
+    CodeType currentCode;
+
 
     std::string S;
 
-    while (fread.get(currentChar)) {
-        throw_cannot_decode(currentChar);
+    while (fread.get(reinterpret_cast<char*>(&currentCode), 2)) {
+        throw_cannot_decode(currentCode);
 
 
     }
-    out << currentChar;
+    out << currentCode;
 
     out.close();
 }
 
-void Decoder::throw_cannot_decode(char character) {
+void Decoder::throw_cannot_decode(CodeType character) {
     if (static_cast<int>(character) > dictionary.size()) {
         throw std::runtime_error("Cannot decode, character: " + std::to_string(static_cast<int>(character)) +
                                  ", dict size: " + std::to_string(dictionary.size()));
