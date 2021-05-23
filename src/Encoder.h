@@ -14,7 +14,7 @@ private:
     void refillDictionary();
     bool existsInDictionary(const std::string& key);
     void addToDictionary(const std::string& key);
-    CodeType getDictionaryValue(const std::string& key);
+    CodeType* getDictionaryValue(const std::string& key);
     void handleFullDictionary();
 
 public:
