@@ -5,7 +5,7 @@ Decoder::Decoder(const std::string &s) : Coder(s) {};
 void Decoder::work() {
     std::ofstream out;
     std::string decoded = path;
-    out.open(decoded.erase(decoded.size()-4, 4), std::ios::binary);    //std::ios::binary
+    out.open(decoded.erase(decoded.size()-4, 4) + ".pgm", std::ios::binary);    //std::ios::binary
 
     CodeType currentCode;
     std::string characters;
