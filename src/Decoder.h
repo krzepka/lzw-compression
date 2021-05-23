@@ -1,13 +1,13 @@
 #include<string>
-#include <map>
+#include <vector>
 #include "Coder.h"
 #pragma once
 
 typedef unsigned short CodeType;
-typedef std::map<std::string, CodeType> DictionaryType;
+typedef std::vector<std::string> DecoderDictionaryType;
 
 class Decoder: Coder{
-    DictionaryType dictionary;
+    DecoderDictionaryType dictionary;
 public:
     void work();
     explicit Decoder(const std::string&);

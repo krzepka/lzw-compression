@@ -6,20 +6,19 @@ void Decoder::work() {
     std::ofstream out;
     std::string decoded = path;
 
-    int previousIndex;
+    CodeType previousIndex;
     char firstChar;
 
     CodeType currentCode;
 
 
-    std::string S;
+    std::string characters;
 
     while (fread.get(reinterpret_cast<char*>(&currentCode), 2)) {
         throw_cannot_decode(currentCode);
-
+        previousIndex = currentCode;
 
     }
-    out << currentCode;
 
     out.close();
 }
