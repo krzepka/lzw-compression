@@ -1,4 +1,4 @@
-#include<string>
+#include <string>
 #include <map>
 #include "Coder.h"
 #pragma once

@@ -1,5 +1,5 @@
-#include<string>
-#include<fstream>
+#include <string>
+#include <fstream>
 #pragma once
 
 class Coder{

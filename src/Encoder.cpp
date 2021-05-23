@@ -1,5 +1,5 @@
 #include "Encoder.h"
-#include<fstream>
+#include <fstream>
 #include <utility>
 #include <limits>
 
@@ -7,7 +7,7 @@ Encoder::Encoder(const std::string& s, std::string out):Coder(s), outname(std::m
 
 void Encoder::work(){
     std::ofstream out;
-    out.open("output/"+outname+".enc", std::ios_base::binary);    //std::ios::binary
+    out.open("output/"+outname+".enc", std::ios::binary);
 
     char currentChar;
     fread.get(currentChar);
