@@ -22,7 +22,6 @@ void Encoder::work(){
             characters += currentChar;
         }
         else{
-//            out << getDictionaryValue(characters);
             out.write(reinterpret_cast<char*>(getDictionaryValue(characters)), sizeof(CodeType));
             addToDictionary(characters + currentChar);
             characters = std::string{currentChar};
@@ -31,7 +30,7 @@ void Encoder::work(){
         handleFullDictionary();
 
     }
-    out.write(reinterpret_cast<char*>(getDictionaryValue({currentChar})), sizeof(CodeType));
+    out.write(reinterpret_cast<char*>(getDictionaryValue({characters})), sizeof(CodeType));
     out.close();
 }
 
