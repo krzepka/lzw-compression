@@ -14,6 +14,7 @@ for foldername in os.listdir('input'):
 		thisratio = dec_size/enc_size
 		ratio.append(thisratio)
 		print(f'The compression ratio is: {thisratio:.3}. The compression percentage is: {(1 - 1/thisratio)*100:.3}%')
+		print(f'The bit average is: {1/thisratio*8:.3}. This is the average amount of bits in the encoding for a symbol in the original.')
 		files += 1
 		if ob == db: correct += 1
 print(f'Correctly encoded+decoded files: {correct}/{files}')
