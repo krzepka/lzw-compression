@@ -11,9 +11,10 @@ for foldername in os.listdir('input'):
 		ob, db, _, _ =check(f'{foldername}/{filename}')
 		enc_size = os.path.getsize(f'output/{foldername}/{filename}.enc')
 		dec_size = os.path.getsize(f'output/{foldername}/{filename}')
-		ratio.append(enc_size/dec_size)
-		print(f'The compression ratio is: {enc_size/dec_size}')
+		thisratio = dec_size/enc_size
+		ratio.append(thisratio)
+		print(f'The compression ratio is: {thisratio:.3}. The compression percentage is: {(1 - 1/thisratio)*100:.3}%')
 		files += 1
 		if ob == db: correct += 1
 print(f'Correctly encoded+decoded files: {correct}/{files}')
-print(f'Average compression ratio: {np.average(ratio)}')
+print(f'Average compression ratio: {np.average(ratio):.3}')
